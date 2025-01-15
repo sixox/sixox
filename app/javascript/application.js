@@ -4,6 +4,9 @@ import "controllers"
 import * as bootstrap from "bootstrap"
 window.bootstrap = bootstrap;
 
+const application = Application.start()
+application.register("bs-modal-form", BsModalFormController)
+
 document.addEventListener("turbo:frame-load", function() {
   var rangeInput = document.getElementById("picked_up_range");
   var valueDisplay = document.getElementById("picked_up_value");
